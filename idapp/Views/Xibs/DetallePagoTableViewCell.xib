@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetallePagoTableViewCell" customModule="idapp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DetallePagoTableViewCell" customModule="idapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monto pagado:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cky-pb-vTj">
+                        <rect key="frame" x="0.0" y="-0.5" width="128" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xy3-Jo-NA2">
+                        <rect key="frame" x="143" y="-0.5" width="177" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.47843137254901957" green="0.47843137254901957" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3,500.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhE-Vx-TiM">
+                        <rect key="frame" x="143" y="-0.5" width="177" height="44"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <color key="textColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xy3-Jo-NA2" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.6" constant="-15" id="2iW-6O-rKI"/>
+                    <constraint firstItem="qhE-Vx-TiM" firstAttribute="height" secondItem="xy3-Jo-NA2" secondAttribute="height" id="LdX-mS-Sw3"/>
+                    <constraint firstAttribute="trailing" secondItem="xy3-Jo-NA2" secondAttribute="trailing" id="N7g-ZJ-n1R"/>
+                    <constraint firstItem="cky-pb-vTj" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="Os2-id-ERU"/>
+                    <constraint firstItem="qhE-Vx-TiM" firstAttribute="centerY" secondItem="xy3-Jo-NA2" secondAttribute="centerY" id="WVH-fe-oRc"/>
+                    <constraint firstItem="qhE-Vx-TiM" firstAttribute="centerX" secondItem="xy3-Jo-NA2" secondAttribute="centerX" id="cpY-uu-Cz1"/>
+                    <constraint firstItem="xy3-Jo-NA2" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="dVq-nN-hnA"/>
+                    <constraint firstItem="xy3-Jo-NA2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qeG-W0-wyY"/>
+                    <constraint firstItem="cky-pb-vTj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sru-Um-5WU"/>
+                    <constraint firstItem="cky-pb-vTj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="t1w-aD-Es6"/>
+                    <constraint firstItem="cky-pb-vTj" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="uSQ-M1-7hN"/>
+                    <constraint firstItem="qhE-Vx-TiM" firstAttribute="width" secondItem="xy3-Jo-NA2" secondAttribute="width" id="ydS-Cs-LFw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="detalleOne" destination="qhE-Vx-TiM" id="akT-oj-g1J"/>
+                <outlet property="detalleTwo" destination="xy3-Jo-NA2" id="FfI-yJ-48z"/>
+                <outlet property="tittle" destination="cky-pb-vTj" id="NFU-zE-Bvb"/>
+                <outlet property="view" destination="H2p-sc-9uM" id="zld-lA-jgC"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
