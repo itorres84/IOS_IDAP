@@ -23,3 +23,8 @@ struct DatosFactura {
     var rfc : String
     var direccion : String
 }
+
+struct OptionMenu {
+    var image : String
+    var title : String
+}

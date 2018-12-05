@@ -20,10 +20,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Fb-Dr-7An">
-                        <rect key="frame" x="10" y="9" width="71.5" height="71.5"/>
+                        <rect key="frame" x="237.5" y="13.5" width="62.5" height="62.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icoCheck" translatesAutoresizingMaskIntoConstraints="NO" id="dMn-Tg-CLm">
-                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="71.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icoHome" translatesAutoresizingMaskIntoConstraints="NO" id="dMn-Tg-CLm">
+                                <rect key="frame" x="12.5" y="12.5" width="37.5" height="37.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dMn-Tg-CLm" secondAttribute="height" multiplier="1:1" id="gOI-HJ-Q5N"/>
                                 </constraints>
@@ -34,25 +34,23 @@
                             <constraint firstAttribute="width" secondItem="4Fb-Dr-7An" secondAttribute="height" multiplier="1:1" id="6eu-kp-JXh"/>
                             <constraint firstItem="dMn-Tg-CLm" firstAttribute="centerY" secondItem="4Fb-Dr-7An" secondAttribute="centerY" id="MMg-DN-fur"/>
                             <constraint firstItem="dMn-Tg-CLm" firstAttribute="centerX" secondItem="4Fb-Dr-7An" secondAttribute="centerX" id="e6M-yn-DN4"/>
-                            <constraint firstItem="dMn-Tg-CLm" firstAttribute="width" secondItem="4Fb-Dr-7An" secondAttribute="width" id="n2p-LE-PQZ"/>
-                            <constraint firstItem="dMn-Tg-CLm" firstAttribute="height" secondItem="4Fb-Dr-7An" secondAttribute="height" id="zhS-Rd-h8H"/>
+                            <constraint firstItem="dMn-Tg-CLm" firstAttribute="width" secondItem="4Fb-Dr-7An" secondAttribute="width" multiplier="0.6" id="n2p-LE-PQZ"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7u-q9-3N3">
-                        <rect key="frame" x="91.5" y="34.5" width="202.5" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7u-q9-3N3">
+                        <rect key="frame" x="26" y="34.5" width="201.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
-                        <color key="textColor" red="0.070588235289999995" green="0.19215686269999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="highlightedColor" red="0.070588235289999995" green="0.19215686269999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="4Fb-Dr-7An" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="TsU-WO-fSH"/>
+                    <constraint firstItem="J7u-q9-3N3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="S5P-1A-eew"/>
+                    <constraint firstAttribute="trailing" secondItem="4Fb-Dr-7An" secondAttribute="trailing" constant="20" id="e9B-Na-vtq"/>
                     <constraint firstItem="J7u-q9-3N3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gYF-gA-7cb"/>
                     <constraint firstItem="4Fb-Dr-7An" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iYp-hM-Yhq"/>
-                    <constraint firstItem="4Fb-Dr-7An" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="jdV-GV-h2U"/>
-                    <constraint firstItem="J7u-q9-3N3" firstAttribute="leading" secondItem="4Fb-Dr-7An" secondAttribute="trailing" constant="10" id="no7-gH-591"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="J7u-q9-3N3" secondAttribute="trailing" constant="10" id="pFN-IW-wV7"/>
+                    <constraint firstItem="4Fb-Dr-7An" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.7" id="jdV-GV-h2U"/>
+                    <constraint firstItem="4Fb-Dr-7An" firstAttribute="leading" secondItem="J7u-q9-3N3" secondAttribute="trailing" constant="10" id="yv3-Hl-yXU"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,6 +64,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icoCheck" width="24" height="19"/>
+        <image name="icoHome" width="48" height="48"/>
     </resources>
 </document>

@@ -16,6 +16,10 @@ class MenuTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.iconView.layer.borderColor = UIColor.black.cgColor
+        self.iconView.layer.borderWidth = 0.5
+        self.iconView.layer.cornerRadius = (self.iconView.bounds.width / 2)
+        self.iconView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

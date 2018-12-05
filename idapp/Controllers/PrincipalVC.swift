@@ -12,7 +12,9 @@ class PrincipalVC: UIViewController {
     //MARK: - Variables
     var dataPago = [Pago]()
     var dataFactura = [DatosFactura]()
+    var dataMenu = [OptionMenu]()
     let real : RealTimeService = RealTimeService()
+    var isShowMenu = false
     
     
     //MARK: - IBOutlets
@@ -20,6 +22,8 @@ class PrincipalVC: UIViewController {
     @IBOutlet weak var tableViewPagos: UITableView!
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var tableViewMenu: UITableView!
+    @IBOutlet weak var headerMenu: UIView!
+    @IBOutlet weak var constraintRightMenu: NSLayoutConstraint!
     
     
     //MARK: - IBActions
@@ -35,6 +39,8 @@ class PrincipalVC: UIViewController {
     //MARK: - Inicio
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addBlurEffect(view: self.headerMenu)
+        self.showMenu()
         self.tableViewPagos.delegate = self
         self.tableViewPagos.dataSource = self
         
@@ -50,7 +56,7 @@ class PrincipalVC: UIViewController {
         self.buttonNuevoPago.clipsToBounds = true
         
         self.getPayments(pickerTextField: UITextField())
-        
+        self.loadOptionsMenu()
 //        self.addBlurEffect(view: self.menuView)
     }
     
@@ -89,6 +95,47 @@ class PrincipalVC: UIViewController {
         blurEffectView.frame = view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(blurEffectView)
+    }
+    
+    func loadOptionsMenu(){
+        var optionOne = OptionMenu.init(image: "icoHome", title: "Inicio")
+        dataMenu.append(optionOne)
+        optionOne = OptionMenu.init(image: "icoUsuario", title: "Administrar cuenta")
+        dataMenu.append(optionOne)
+        optionOne = OptionMenu.init(image: "icoTarjetas", title: "Forma de pago")
+        dataMenu.append(optionOne)
+        optionOne = OptionMenu.init(image: "icoExit", title: "Cerra sesión")
+        dataMenu.append(optionOne)
+    }
+    
+    func showMenu(){
+        if isShowMenu{
+            self.tableViewPagos.isUserInteractionEnabled = false
+            self.buttonNuevoPago.isUserInteractionEnabled = false
+            
+            self.menuView.layoutIfNeeded() // Change to
+            self.view.layoutIfNeeded()
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: .curveEaseInOut,  animations: {
+                self.constraintRightMenu.constant = 0
+                self.menuView.layoutIfNeeded() // Change to
+                self.view.layoutIfNeeded()
+            }, completion: {res in
+                self.isShowMenu = false
+            })
+        }else{
+            self.tableViewPagos.isUserInteractionEnabled = true
+            self.buttonNuevoPago.isUserInteractionEnabled = true
+            
+            self.menuView.layoutIfNeeded() // Change to
+            self.view.layoutIfNeeded()
+            UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.5, options: .curveEaseInOut,  animations: {
+                self.constraintRightMenu.constant = -(self.menuView.frame.height)
+                self.menuView.layoutIfNeeded() // Change to
+                self.view.layoutIfNeeded()
+            }, completion: {res in
+                self.isShowMenu = true
+            })
+        }
     }
     
     
@@ -160,7 +207,7 @@ class PrincipalVC: UIViewController {
     //MARK: - Gestures
     @objc func didTapButton(sender: UITapGestureRecognizer){
         print("MENU..")
-        self.dismiss(animated: true, completion: nil)
+        self.showMenu()
     }
     
     
@@ -177,7 +224,7 @@ extension PrincipalVC: UITableViewDataSource{
         if tableView == tableViewPagos{
             return dataPago.count
         }else{
-            return 2
+            return dataMenu.count
         }
     }
     
@@ -206,7 +253,9 @@ extension PrincipalVC: UITableViewDataSource{
         }else{
             let cell: MenuTableViewCell = tableViewMenu.dequeueReusableCell(withIdentifier: "MenuTableViewCell") as! MenuTableViewCell
             
-            cell.titleOption.text = "Opción menú \(indexPath.row)"
+            cell.iconImage.image = UIImage(named: dataMenu[indexPath.row].image)
+            cell.titleOption.text = dataMenu[indexPath.row].title
+            
             cell.selectionStyle = .none
             return cell
         }
@@ -227,6 +276,12 @@ extension PrincipalVC: UITableViewDelegate{
             self.navigationController?.pushViewController(controller, animated: true)
         }else{
             print("Opción \(indexPath.row) del menú")
+            switch dataMenu[indexPath.row].title{
+            case "Cerra sesión":
+                self.dismiss(animated: true, completion: nil)
+            default:
+                self.showMenu()
+            }
         }
     }
     
@@ -234,7 +289,7 @@ extension PrincipalVC: UITableViewDelegate{
             if tableView == tableViewPagos{
                 return 120
             }else{
-                return self.menuView.frame.height / 6
+                return self.menuView.frame.height / 7
             }
         }
 }
