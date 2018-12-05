@@ -39,10 +39,26 @@ class ViewController: BaseViewController {
                     self.mostrarErrorAlert(msj: error.localizedDescription)
                     return
                 }
-                UserDefaults.standard.set(user?.user.uid, forKey: "UID")
-                UserDefaults.standard.synchronize()
-                self.hideLoading()
-                self.mostrarPrincipal()
+                
+                dump(user?.user.isEmailVerified);
+                
+                if (user?.user.isEmailVerified)!{
+                    
+                    UserDefaults.standard.set(user?.user.uid, forKey: "UID")
+                    UserDefaults.standard.synchronize()
+                    self.hideLoading()
+                    self.mostrarPrincipal()
+                    
+                }else{
+                    
+                    self.txtFieldMail.textField.text = ""
+                    self.txtFieldPwd.textField.text = ""
+                    self.hideLoading()
+                    self.mostrarErrorAlert(msj: "Su email no ha sido verificado")
+                    
+                    
+                }
+                
             }
             
         }else{
