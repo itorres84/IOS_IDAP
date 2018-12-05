@@ -43,7 +43,7 @@ class PrincipalVC: UIViewController {
         
         tableViewPagos.register(UINib(nibName: "PagosTableViewCell", bundle: nil), forCellReuseIdentifier: "PagosTableViewCell")
         
-        tableViewMenu.register(UINib(nibName: "PagosTableViewCell", bundle: nil), forCellReuseIdentifier: "PagosTableViewCell")
+        tableViewMenu.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuTableViewCell")
         
         self.configNavBar()
         self.buttonNuevoPago.layer.cornerRadius = 10
@@ -204,10 +204,9 @@ extension PrincipalVC: UITableViewDataSource{
             cell.selectionStyle = .none
             return cell
         }else{
-            let cell: PagosTableViewCell = tableViewPagos.dequeueReusableCell(withIdentifier: "PagosTableViewCell") as! PagosTableViewCell
+            let cell: MenuTableViewCell = tableViewMenu.dequeueReusableCell(withIdentifier: "MenuTableViewCell") as! MenuTableViewCell
             
-            cell.concepto.text = dataPago[indexPath.row].concepto
-            
+            cell.titleOption.text = "Opción menú \(indexPath.row)"
             cell.selectionStyle = .none
             return cell
         }
@@ -235,7 +234,7 @@ extension PrincipalVC: UITableViewDelegate{
             if tableView == tableViewPagos{
                 return 120
             }else{
-                return 80
+                return self.menuView.frame.height / 6
             }
         }
 }

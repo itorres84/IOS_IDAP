@@ -55,6 +55,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="J7u-q9-3N3" secondAttribute="trailing" constant="10" id="pFN-IW-wV7"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="iconImage" destination="dMn-Tg-CLm" id="5IX-1c-iNq"/>
