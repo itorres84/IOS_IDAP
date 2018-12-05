@@ -15,6 +15,7 @@ class ViewController: BaseViewController {
     
     //MARK: - IBOutlets
     @IBOutlet weak var buttonSesion: UIButton!
+    @IBOutlet weak var btnsingup: UIButton!
     @IBOutlet weak var buttonForgetPassword: UIButton!
     @IBOutlet weak var txtFieldMail: textFieldCustomVC!
     @IBOutlet weak var txtFieldPwd: textFieldCustomVC!
@@ -54,13 +55,28 @@ class ViewController: BaseViewController {
         print("Presionaste reestablecer password...")
     }
     
+    
+    @IBAction func singup(_ sender: UIButton) {
+        
+        print("Registrate")
+        
+        
+    }
+    
+    
+    
+    
     //MARK: - Inicio
     override func viewDidLoad() {
         super.viewDidLoad()
         self.txtFieldMail.textField.delegate = self
         self.txtFieldPwd.textField.delegate = self
+        
         self.buttonSesion.layer.cornerRadius = 10
         self.buttonSesion.clipsToBounds = true
+        self.btnsingup.layer.cornerRadius = 10
+        self.btnsingup.clipsToBounds = true
+        
         self.buttonForgetPassword.underline()
         
         self.txtFieldMail.textField.text = "israeltorres27@gmail.com"
