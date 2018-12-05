@@ -119,7 +119,7 @@ class ConfirmarPagoVC: UIViewController {
                                              monto: self.montoVC,
                                              facturado: !self.requiereFactura,
                                              metodoPago: "**** ****",
-                                             horaPago: "0:00am")
+                                             horaPago: "0:00am", id: "", idProd: "", idFac: "")
                 self.delegate?.cobroExitosoFinish(pago: pagoActual)
             }
         }

@@ -16,6 +16,9 @@ struct Pago {
     var facturado : Bool
     var metodoPago : String
     var horaPago : String
+    var id:String
+    var idProd:String
+    var idFac:String
 }
 
 struct DatosFactura {

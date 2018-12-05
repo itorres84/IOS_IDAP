@@ -23,7 +23,79 @@ public class Payment:EVNetworkingObject {
     public var livemode:NSNumber? //Bool
     public var payment_status:String?
     public var updated_at:NSNumber?
+    
+    //Paypal var
+    public var car:String?
+    public var create_time:String?
+    public var httpStatusCode:NSNumber?
+    public var intent:String?
+    public var links:[Links]?
+    public var payer:Payer?
+    public var state:String?
+    public var transactions:[Transaction]?
+    
 }
+
+//MARK: - PayPal Objs
+public class Links: EVNetworkingObject{
+    public var href: String?
+    public var method: String?
+    public var rel:String?
+}
+
+public class Payer: EVNetworkingObject{
+    public var payer_info: Payer_info?
+    public var payment_method: String?
+    public var status:String?
+}
+
+public class Payer_info: EVNetworkingObject{
+    public var country_code: String?
+    public var email: String?
+    public var first_name:String?
+    public var last_name:String?
+    public var payer_id:String?
+    public var shipping_address:Shipping_address?
+    
+}
+
+public class Shipping_address: EVNetworkingObject{
+    public var city: String?
+    public var country_code: String?
+    public var line1:String?
+    public var postal_code:String?
+    public var recipient_name:String?
+    public var state:String?
+}
+
+public class Transaction: EVNetworkingObject{
+    public var amount:Amount?
+    public var item_list:Item_list?
+    
+}
+
+public class Amount: EVNetworkingObject{
+    public var currency: String?
+    public var total:String?
+    
+}
+
+public class Item_list: EVNetworkingObject{
+    public var items:[Item]?
+    
+}
+
+
+
+public class Item:EVNetworkingObject{
+    public var currency:String?
+    public var name:String?
+    public var price:String?
+    public var quantity:NSNumber?
+    public var sku:String?
+    
+}
+
 
 
 //MARK: - Charges

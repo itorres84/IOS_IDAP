@@ -8,6 +8,15 @@
 
 import UIKit
 
+extension String {
+    func contains(find: String) -> Bool{
+        return self.range(of: find) != nil
+    }
+    func containsIgnoringCase(find: String) -> Bool{
+        return self.range(of: find, options: .caseInsensitive) != nil
+    }
+}
+
 class PrincipalVC: UIViewController {
     //MARK: - Variables
     var dataPago = [Pago]()
@@ -156,22 +165,46 @@ class PrincipalVC: UIViewController {
         self.dataFactura.removeAll()
         
         for obj in response{
-            let fechaPago = formatDateToFirebase(serverDate: obj.created_at!)
-            let horaPago = formatOurToFirebase(timeStamp: obj.created_at!)
             
-            let resp = Pago(concepto: ("Pago de Colegiatura"),
-                            fechaPago: fechaPago,
-                            monto: obj.amount?.stringValue ?? "0.0",
-                            facturado: (obj.dataFactura?.first?.facturado?.boolValue ?? false ),
-                            metodoPago: obj.charges?.first?.data?.first?.payment_method?.first?.last4 ?? "****",
-                            horaPago: horaPago)
-            
-            dataPago.append(resp)
-            
-            let fac = DatosFactura.init(razonSocial: obj.customer_info?.first?.name ?? "",
-                                        rfc: obj.customer_info?.first?.object ?? "",
-                                        direccion: obj.customer_info?.first?.email ?? "")
-            dataFactura.append(fac)
+            print(obj);
+            if (obj.id?.contains(find: "PAY"))!{
+                print("PayPAL")
+                let fechaPago = formatDateToFirebasePaypal(serverDate: obj.create_time!)   //formatDateToFirebase(serverDate: obj.created_at!)
+                let horaPago = formatHoraToFirebasePaypal(serverDate: obj.create_time!)
+                
+                let resp = Pago(concepto: (obj.transactions![0].item_list?.items![0].name)!,
+                                fechaPago: fechaPago,
+                                monto:(obj.transactions![0].amount?.total)!,
+                                facturado: (obj.dataFactura?.first?.facturado?.boolValue ?? false ),
+                                metodoPago: (obj.payer?.payment_method)!,
+                                horaPago: horaPago, id: obj.id!, idProd: obj.dataFactura?.first?.idProd ?? "", idFac: (obj.dataFactura?.first?.idFac)!)
+        
+                dataPago.append(resp)
+
+                let fac = DatosFactura.init(razonSocial: obj.payer?.payer_info?.first_name ?? "",
+                                            rfc: obj.customer_info?.first?.object ?? "",
+                                            direccion: obj.payer?.payer_info?.email ?? "")
+                dataFactura.append(fac)
+                
+            }else{
+                            let fechaPago = formatDateToFirebase(serverDate: obj.created_at!)
+                            let horaPago = formatOurToFirebase(timeStamp: obj.created_at!)
+                
+                            let resp = Pago(concepto: ("Pago de Colegiatura"),
+                                            fechaPago: fechaPago,
+                                            monto: obj.amount?.stringValue ?? "0.0",
+                                            facturado: (obj.dataFactura?.first?.facturado?.boolValue ?? false ),
+                                            metodoPago: obj.charges?.first?.data?.first?.payment_method?.first?.last4 ?? "****",
+                                            horaPago: horaPago, id: obj.id!,idProd: obj.dataFactura?.first?.idProd ?? "", idFac: (obj.dataFactura?.first?.idFac)!)
+                
+                
+                            dataPago.append(resp)
+                
+                            let fac = DatosFactura.init(razonSocial: obj.customer_info?.first?.name ?? "",
+                                                        rfc: obj.customer_info?.first?.object ?? "",
+                                                        direccion: obj.customer_info?.first?.email ?? "")
+                            dataFactura.append(fac)
+            }
         }
         self.tableViewPagos.reloadData()
     }
@@ -201,6 +234,48 @@ class PrincipalVC: UIViewController {
         let ourString = dayTimePeriodFormatter.string(from: date as Date)
         
         return ourString
+    }
+    
+    func formatDateToFirebasePaypal(serverDate:String)->String{
+        
+        var strdate = serverDate.replacingOccurrences(of: "T", with: " ")
+        strdate = strdate.replacingOccurrences(of: "Z", with: "")
+        
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "MM/dd/yyyy"
+        dateFormatterPrint.locale = NSLocale.current
+        
+        if let date = dateFormatterGet.date(from: strdate) {
+            print(dateFormatterPrint.string(from: date))
+            return  dateFormatterPrint.string(from: date)
+        } else {
+            print("There was an error decoding the string")
+            return " "
+        }
+    }
+    
+    func formatHoraToFirebasePaypal(serverDate:String)->String{
+        
+        var strdate = serverDate.replacingOccurrences(of: "T", with: " ")
+        strdate = strdate.replacingOccurrences(of: "Z", with: "")
+        
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "hh:mm a"
+        dateFormatterPrint.locale = NSLocale.current
+        
+        if let date = dateFormatterGet.date(from: strdate) {
+            print(dateFormatterPrint.string(from: date))
+            return  dateFormatterPrint.string(from: date)
+        } else {
+            print("There was an error decoding the string")
+            return " "
+        }
     }
     
     
@@ -272,7 +347,6 @@ extension PrincipalVC: UITableViewDelegate{
             
             controller.detalle = dataPago[indexPath.row]
             controller.dataFactura = dataFactura[indexPath.row]
-            
             self.navigationController?.pushViewController(controller, animated: true)
         }else{
             print("Opción \(indexPath.row) del menú")

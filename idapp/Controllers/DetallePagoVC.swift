@@ -73,6 +73,10 @@ class DetallePagoVC: UIViewController {
             self.viewDatosFacturacion.isHidden = true
             self.viewOpFacturar.isHidden = false
         }
+        
+        print("Datos para facturar o reenviar idProd\(detalle.idFac) idFac: \(detalle.idFac)")
+        
+        
     }
     
     //MARK: - Funciones Controller
@@ -98,11 +102,16 @@ class DetallePagoVC: UIViewController {
         subtittles.removeAll()
         subtittles.append("$" + detalle.monto)
         subtittles.append(detalle.concepto)
-        subtittles.append("**** **** **** " + detalle.metodoPago)
+        if detalle.metodoPago == "paypal"{
+           subtittles.append(detalle.metodoPago)
+        }else{
+           subtittles.append("**** **** **** " + detalle.metodoPago)
+        }
         subtittles.append(detalle.fechaPago)
         subtittles.append(detalle.horaPago)
         if detalle.facturado{
             subtittles.append("Si")
+            
         }else{
             subtittles.append("No")
         }

@@ -40,8 +40,6 @@ class ViewController: BaseViewController {
                     return
                 }
                 
-                dump(user?.user.isEmailVerified);
-                
                 if (user?.user.isEmailVerified)!{
                     
                     UserDefaults.standard.set(user?.user.uid, forKey: "UID")
