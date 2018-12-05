@@ -50,19 +50,35 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oFW-L6-7Im">
-                                <rect key="frame" x="150" y="64" width="225" height="603"/>
+                                <rect key="frame" x="112.5" y="64" width="262.5" height="603"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpV-de-GM9">
+                                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="90.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRJ-fE-ME1">
+                                        <rect key="frame" x="0.0" y="90.5" width="262.5" height="512.5"/>
+                                        <color key="backgroundColor" white="0.94999999999999996" alpha="0.7984535531246576" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NHL-E0-kMI">
-                                        <rect key="frame" x="0.0" y="0.0" width="225" height="603"/>
+                                        <rect key="frame" x="0.0" y="90.5" width="262.5" height="512.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.94999999999999996" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="NHL-E0-kMI" firstAttribute="centerY" secondItem="oFW-L6-7Im" secondAttribute="centerY" id="A4t-OU-WIR"/>
+                                    <constraint firstItem="qpV-de-GM9" firstAttribute="centerX" secondItem="oFW-L6-7Im" secondAttribute="centerX" id="25i-gP-Xkc"/>
+                                    <constraint firstAttribute="bottom" secondItem="NHL-E0-kMI" secondAttribute="bottom" id="FXs-wT-RdM"/>
+                                    <constraint firstItem="NHL-E0-kMI" firstAttribute="height" secondItem="bRJ-fE-ME1" secondAttribute="height" id="L6K-UA-U10"/>
                                     <constraint firstItem="NHL-E0-kMI" firstAttribute="width" secondItem="oFW-L6-7Im" secondAttribute="width" id="Lxv-Gt-JK8"/>
+                                    <constraint firstItem="bRJ-fE-ME1" firstAttribute="height" secondItem="oFW-L6-7Im" secondAttribute="height" multiplier="0.85" id="TMh-CF-5V1"/>
                                     <constraint firstItem="NHL-E0-kMI" firstAttribute="centerX" secondItem="oFW-L6-7Im" secondAttribute="centerX" id="YQd-wy-5dT"/>
-                                    <constraint firstItem="NHL-E0-kMI" firstAttribute="height" secondItem="oFW-L6-7Im" secondAttribute="height" id="nxe-h4-kg2"/>
+                                    <constraint firstItem="qpV-de-GM9" firstAttribute="width" secondItem="oFW-L6-7Im" secondAttribute="width" id="Z1c-iQ-Wrc"/>
+                                    <constraint firstItem="bRJ-fE-ME1" firstAttribute="width" secondItem="oFW-L6-7Im" secondAttribute="width" id="gos-Ap-H2K"/>
+                                    <constraint firstAttribute="bottom" secondItem="bRJ-fE-ME1" secondAttribute="bottom" id="gwO-Dn-Afr"/>
+                                    <constraint firstItem="bRJ-fE-ME1" firstAttribute="centerX" secondItem="oFW-L6-7Im" secondAttribute="centerX" id="oAL-z2-WwG"/>
+                                    <constraint firstItem="bRJ-fE-ME1" firstAttribute="top" secondItem="qpV-de-GM9" secondAttribute="bottom" id="ocS-cu-82a"/>
+                                    <constraint firstItem="qpV-de-GM9" firstAttribute="top" secondItem="oFW-L6-7Im" secondAttribute="top" id="q0O-in-9e2"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -74,7 +90,7 @@
                             <constraint firstItem="01Z-Pn-EZF" firstAttribute="leading" secondItem="g7R-22-lhx" secondAttribute="leading" id="FSh-au-6P3"/>
                             <constraint firstItem="rho-Np-QCo" firstAttribute="centerX" secondItem="Vhf-3m-Fku" secondAttribute="centerX" id="JaN-qQ-VZt"/>
                             <constraint firstAttribute="trailing" secondItem="jnV-3e-XQ3" secondAttribute="trailing" id="LTR-Gu-ri3"/>
-                            <constraint firstItem="oFW-L6-7Im" firstAttribute="width" secondItem="g7R-22-lhx" secondAttribute="width" multiplier="0.6" id="Lb3-Hv-XJE"/>
+                            <constraint firstItem="oFW-L6-7Im" firstAttribute="width" secondItem="g7R-22-lhx" secondAttribute="width" multiplier="0.7" id="Lb3-Hv-XJE"/>
                             <constraint firstItem="iCS-y5-yMi" firstAttribute="top" secondItem="jnV-3e-XQ3" secondAttribute="bottom" constant="10" id="TIW-GK-krG"/>
                             <constraint firstItem="jnV-3e-XQ3" firstAttribute="top" secondItem="01Z-Pn-EZF" secondAttribute="bottom" id="Vv1-AL-oJw"/>
                             <constraint firstItem="iCS-y5-yMi" firstAttribute="width" secondItem="Vhf-3m-Fku" secondAttribute="width" multiplier="1:2" id="W1U-pz-hKa"/>
@@ -91,6 +107,8 @@
                     <navigationItem key="navigationItem" id="wVE-5s-H7K"/>
                     <connections>
                         <outlet property="buttonNuevoPago" destination="iCS-y5-yMi" id="syj-IZ-NLe"/>
+                        <outlet property="constraintRightMenu" destination="xKb-ta-gYa" id="uEW-2x-rH1"/>
+                        <outlet property="headerMenu" destination="qpV-de-GM9" id="a95-Oh-VEY"/>
                         <outlet property="menuView" destination="oFW-L6-7Im" id="qdK-nT-Kga"/>
                         <outlet property="tableViewMenu" destination="NHL-E0-kMI" id="6eZ-Zm-49e"/>
                         <outlet property="tableViewPagos" destination="jnV-3e-XQ3" id="sJV-It-n0F"/>
@@ -293,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sqa-Gb-Vg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1159.2" y="-316.19190404797604"/>
+            <point key="canvasLocation" x="1962" y="-317"/>
         </scene>
         <!--Confirmar PagoVC-->
         <scene sceneID="Lup-l3-99Q">
@@ -633,7 +651,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecq-A3-vY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1960.8" y="-304.4977511244378"/>
+            <point key="canvasLocation" x="2764" y="-305"/>
         </scene>
         <!--Detalle PagoVC-->
         <scene sceneID="jV1-gu-Yl5">
@@ -908,7 +926,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVN-Ao-ob2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="434"/>
+            <point key="canvasLocation" x="1951" y="432"/>
         </scene>
         <!--FacturaVC-->
         <scene sceneID="osa-ON-FWX">
@@ -956,7 +974,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCb-K7-VdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1945" y="430"/>
+            <point key="canvasLocation" x="2748" y="429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BVZ-KS-BsA">
