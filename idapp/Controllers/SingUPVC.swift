@@ -25,16 +25,16 @@ class SingUPVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.btnSingUp.layer.cornerRadius = 10
-        self.btnSingUp.clipsToBounds = true
+        //self.btnSingUp.layer.cornerRadius = 10
+        //self.btnSingUp.clipsToBounds = true
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SingUPVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
-        txtEmail.keyboardType = .emailAddress
-        txtEmail.autocorrectionType = .no
-        txtNombre.autocorrectionType = .no
-        txtApellidos.autocorrectionType = .no
-        txtPassword.autocorrectionType = .no
+//
+//        txtEmail.keyboardType = .emailAddress
+//        txtEmail.autocorrectionType = .no
+//        txtNombre.autocorrectionType = .no
+//        txtApellidos.autocorrectionType = .no
+//        txtPassword.autocorrectionType = .no
         
     }
     

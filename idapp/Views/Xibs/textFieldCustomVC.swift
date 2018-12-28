@@ -10,9 +10,23 @@ import UIKit
 
 @IBDesignable
 public class textFieldCustomVC: UIView {
+    
     @IBOutlet var view: UIView!
     @IBOutlet weak var tittleTextField: UILabel!
     @IBOutlet weak var textField: UITextField!
+    let thePicker = UIPickerView()
+    var myPickerData:[String] = [String]()
+    
+    var textFieldBtn: UIButton {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "angle-down"), for: .normal)
+        button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0)
+        button.frame = CGRect(x: CGFloat(textField.frame.size.width - 40), y: CGFloat(5), width: CGFloat(40), height: CGFloat(30))
+        button.backgroundColor = UIColor.clear
+        button.addTarget(self, action: #selector(self.refreshContent), for: .touchUpInside)
+        
+        return button
+    }
     
     
     @IBInspectable
@@ -79,6 +93,11 @@ public class textFieldCustomVC: UIView {
                 self.textField.autocorrectionType = .no
                 self.textField.autocapitalizationType = .allCharacters
             //            self.textField.addTarget(self, action: #selector(VMTxtYaGanaste.editingChanged), for: .editingChanged)
+            case 9:
+                textField.inputView = thePicker
+                thePicker.delegate = self
+                textField.rightView = textFieldBtn
+                textField.rightViewMode = .always
             default:
                 print("Not controler....")
                 self.textField.isSecureTextEntry = false
@@ -108,6 +127,11 @@ public class textFieldCustomVC: UIView {
         sendSubview(toBack: view)
     }
     
+    func setDataPiker(data: [String]){
+        self.myPickerData = data
+        self.thePicker.reloadAllComponents()
+    }
+    
     
     public func loadViewFromNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
@@ -115,4 +139,29 @@ public class textFieldCustomVC: UIView {
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         return view
     }
+    
+    @objc func refreshContent() {
+        self.textField.becomeFirstResponder()
+    }
+    
+}
+extension textFieldCustomVC: UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+         return 1
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return myPickerData.count
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return myPickerData[row]
+    }
+    
+    
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+    }
+    
 }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChekView" customModule="idapp" customModuleProvider="target">
+            <connections>
+                <outlet property="ImgCheck" destination="elB-Ma-TCe" id="NtW-kn-Vbs"/>
+                <outlet property="view" destination="iN0-l3-epB" id="sHp-VG-fs1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icoCheck" translatesAutoresizingMaskIntoConstraints="NO" id="elB-Ma-TCe">
+                    <rect key="frame" x="7" y="8.5" width="16" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="Q60-ge-azc"/>
+                        <constraint firstAttribute="width" constant="16" id="k0D-Pf-0Ci"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUh-Qo-Tvi">
+                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                    <connections>
+                        <action selector="changeCheck:" destination="-1" eventType="touchUpInside" id="flP-5D-rBE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="elB-Ma-TCe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NAM-pY-qHs"/>
+                <constraint firstItem="kUh-Qo-Tvi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UIE-Yq-kGa"/>
+                <constraint firstAttribute="bottom" secondItem="kUh-Qo-Tvi" secondAttribute="bottom" id="Vdn-KD-gD5"/>
+                <constraint firstItem="kUh-Qo-Tvi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Xuh-e0-3fg"/>
+                <constraint firstAttribute="trailing" secondItem="kUh-Qo-Tvi" secondAttribute="trailing" id="bKG-9r-ANA"/>
+                <constraint firstItem="elB-Ma-TCe" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dV1-AJ-X0a"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="52.799999999999997" y="48.575712143928037"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icoCheck" width="16" height="13"/>
+    </resources>
+</document>

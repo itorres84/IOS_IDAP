@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4745EBC021B7842F00618866 /* SingUPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4745EBBF21B7842F00618866 /* SingUPVC.swift */; };
+		477E41E421D5ADBD006ADE0F /* ChekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E41E321D5ADBD006ADE0F /* ChekView.swift */; };
+		477E41E621D5ADE9006ADE0F /* ChekView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 477E41E521D5ADE9006ADE0F /* ChekView.xib */; };
 		4F61867F212834D700F16545 /* DetallePagoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F61867D212834D700F16545 /* DetallePagoTableViewCell.swift */; };
 		4F618680212834D700F16545 /* DetallePagoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F61867E212834D700F16545 /* DetallePagoTableViewCell.xib */; };
 		4F618682212A0BE800F16545 /* FacturaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F618681212A0BE800F16545 /* FacturaVC.swift */; };
@@ -41,6 +43,8 @@
 		386E9A9AAD4670F22B1D0900 /* Pods-idapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idapp.release.xcconfig"; path = "Target Support Files/Pods-idapp/Pods-idapp.release.xcconfig"; sourceTree = "<group>"; };
 		38E5055BE539051B18FA51DB /* Pods_idapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_idapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4745EBBF21B7842F00618866 /* SingUPVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingUPVC.swift; sourceTree = "<group>"; };
+		477E41E321D5ADBD006ADE0F /* ChekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChekView.swift; sourceTree = "<group>"; };
+		477E41E521D5ADE9006ADE0F /* ChekView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChekView.xib; sourceTree = "<group>"; };
 		4F61867D212834D700F16545 /* DetallePagoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallePagoTableViewCell.swift; sourceTree = "<group>"; };
 		4F61867E212834D700F16545 /* DetallePagoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetallePagoTableViewCell.xib; sourceTree = "<group>"; };
 		4F618681212A0BE800F16545 /* FacturaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacturaVC.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 				4F61867E212834D700F16545 /* DetallePagoTableViewCell.xib */,
 				4F759E3521B7390D00E46F3B /* MenuTableViewCell.swift */,
 				4F759E3621B7390D00E46F3B /* MenuTableViewCell.xib */,
+				477E41E321D5ADBD006ADE0F /* ChekView.swift */,
+				477E41E521D5ADE9006ADE0F /* ChekView.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 				4FF135FA212801D300FFFBF6 /* PagosTableViewCell.xib in Resources */,
 				4FF135F42127FBE600FFFBF6 /* Principal.storyboard in Resources */,
 				4F99C73F2127D8F3008E83A6 /* Main.storyboard in Resources */,
+				477E41E621D5ADE9006ADE0F /* ChekView.xib in Resources */,
 				4F618680212834D700F16545 /* DetallePagoTableViewCell.xib in Resources */,
 				4F759E3821B7390D00E46F3B /* MenuTableViewCell.xib in Resources */,
 				4FF135F22127E82400FFFBF6 /* textFieldCustomVC.xib in Resources */,
@@ -360,6 +367,7 @@
 				4F99C73C2127D8F3008E83A6 /* ViewController.swift in Sources */,
 				4F99C73A2127D8F3008E83A6 /* AppDelegate.swift in Sources */,
 				4F759E3721B7390D00E46F3B /* MenuTableViewCell.swift in Sources */,
+				477E41E421D5ADBD006ADE0F /* ChekView.swift in Sources */,
 				4FF135F62127FDCC00FFFBF6 /* PrincipalVC.swift in Sources */,
 				4FB4E52321B4E03F00829F85 /* RealTimeService.swift in Sources */,
 				4F618686212A498600F16545 /* ConfirmarPagoVC.swift in Sources */,
@@ -511,14 +519,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8QA9698ZB9;
+				DEVELOPMENT_TEAM = LL48MGDQPJ;
 				INFOPLIST_FILE = idapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ihm.idapp.ita;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idap.PagosIdap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -531,14 +539,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8QA9698ZB9;
+				DEVELOPMENT_TEAM = LL48MGDQPJ;
 				INFOPLIST_FILE = idapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ihm.idapp.ita;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idap.PagosIdap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
