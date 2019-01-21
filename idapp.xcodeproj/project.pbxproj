@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4724158D21E00FEF0092048E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4724158C21E00FEF0092048E /* GoogleService-Info.plist */; };
 		4745EBC021B7842F00618866 /* SingUPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4745EBBF21B7842F00618866 /* SingUPVC.swift */; };
 		477E41E421D5ADBD006ADE0F /* ChekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E41E321D5ADBD006ADE0F /* ChekView.swift */; };
 		477E41E621D5ADE9006ADE0F /* ChekView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 477E41E521D5ADE9006ADE0F /* ChekView.xib */; };
@@ -22,7 +23,6 @@
 		4F99C73F2127D8F3008E83A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F99C73D2127D8F3008E83A6 /* Main.storyboard */; };
 		4F99C7412127D8F5008E83A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F99C7402127D8F5008E83A6 /* Assets.xcassets */; };
 		4F99C7442127D8F5008E83A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F99C7422127D8F5008E83A6 /* LaunchScreen.storyboard */; };
-		4FB4E52121B27DBE00829F85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FB4E52021B27DBE00829F85 /* GoogleService-Info.plist */; };
 		4FB4E52321B4E03F00829F85 /* RealTimeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB4E52221B4E03F00829F85 /* RealTimeService.swift */; };
 		4FB4E52721B4E12E00829F85 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB4E52621B4E12E00829F85 /* Payment.swift */; };
 		4FB4E52921B6DB8B00829F85 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB4E52821B6DB8B00829F85 /* BaseViewController.swift */; };
@@ -40,11 +40,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2167515F30CD16854B151488 /* Pods-idapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-idapp/Pods-idapp.debug.xcconfig"; sourceTree = "<group>"; };
 		386E9A9AAD4670F22B1D0900 /* Pods-idapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idapp.release.xcconfig"; path = "Target Support Files/Pods-idapp/Pods-idapp.release.xcconfig"; sourceTree = "<group>"; };
 		38E5055BE539051B18FA51DB /* Pods_idapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_idapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4724158C21E00FEF0092048E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4745EBBF21B7842F00618866 /* SingUPVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingUPVC.swift; sourceTree = "<group>"; };
 		477E41E321D5ADBD006ADE0F /* ChekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChekView.swift; sourceTree = "<group>"; };
 		477E41E521D5ADE9006ADE0F /* ChekView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChekView.xib; sourceTree = "<group>"; };
+		47FE538021DFEC4900EBBC29 /* idapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = idapp.entitlements; sourceTree = "<group>"; };
 		4F61867D212834D700F16545 /* DetallePagoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallePagoTableViewCell.swift; sourceTree = "<group>"; };
 		4F61867E212834D700F16545 /* DetallePagoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetallePagoTableViewCell.xib; sourceTree = "<group>"; };
 		4F618681212A0BE800F16545 /* FacturaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacturaVC.swift; sourceTree = "<group>"; };
@@ -59,7 +62,6 @@
 		4F99C7402127D8F5008E83A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F99C7432127D8F5008E83A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F99C7452127D8F5008E83A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FB4E52021B27DBE00829F85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FB4E52221B4E03F00829F85 /* RealTimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeService.swift; sourceTree = "<group>"; };
 		4FB4E52621B4E12E00829F85 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		4FB4E52821B6DB8B00829F85 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		4FF135FE21281A9900FFFBF6 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 		4FF136002128266900FFFBF6 /* DetallePagoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallePagoVC.swift; sourceTree = "<group>"; };
 		538C28C3C06DFE69F85D5192 /* Pods-idapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idapp.debug.xcconfig"; path = "Target Support Files/Pods-idapp/Pods-idapp.debug.xcconfig"; sourceTree = "<group>"; };
+		BD599DACC4F8CCFE25AE3D73 /* Pods-idapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-idapp/Pods-idapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 			children = (
 				538C28C3C06DFE69F85D5192 /* Pods-idapp.debug.xcconfig */,
 				386E9A9AAD4670F22B1D0900 /* Pods-idapp.release.xcconfig */,
+				2167515F30CD16854B151488 /* Pods-idapp.debug.xcconfig */,
+				BD599DACC4F8CCFE25AE3D73 /* Pods-idapp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -118,11 +123,12 @@
 		4F99C7382127D8F3008E83A6 /* idapp */ = {
 			isa = PBXGroup;
 			children = (
-				4FB4E52021B27DBE00829F85 /* GoogleService-Info.plist */,
+				47FE538021DFEC4900EBBC29 /* idapp.entitlements */,
 				4F99C7422127D8F5008E83A6 /* LaunchScreen.storyboard */,
 				4F99C7392127D8F3008E83A6 /* AppDelegate.swift */,
 				4F99C7452127D8F5008E83A6 /* Info.plist */,
 				4FE9A18821B6EE45009639A7 /* bg-image.png */,
+				4724158C21E00FEF0092048E /* GoogleService-Info.plist */,
 				4F99C7402127D8F5008E83A6 /* Assets.xcassets */,
 				4FB4E52421B4E0D400829F85 /* Models */,
 				4FF135FB21281A1900FFFBF6 /* Utils */,
@@ -250,6 +256,11 @@
 				TargetAttributes = {
 					4F99C7352127D8F3008E83A6 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -278,13 +289,13 @@
 			files = (
 				4F99C7442127D8F5008E83A6 /* LaunchScreen.storyboard in Resources */,
 				4FE9A18921B6EE45009639A7 /* bg-image.png in Resources */,
-				4FB4E52121B27DBE00829F85 /* GoogleService-Info.plist in Resources */,
 				4F99C7412127D8F5008E83A6 /* Assets.xcassets in Resources */,
 				4FF135FA212801D300FFFBF6 /* PagosTableViewCell.xib in Resources */,
 				4FF135F42127FBE600FFFBF6 /* Principal.storyboard in Resources */,
 				4F99C73F2127D8F3008E83A6 /* Main.storyboard in Resources */,
 				477E41E621D5ADE9006ADE0F /* ChekView.xib in Resources */,
 				4F618680212834D700F16545 /* DetallePagoTableViewCell.xib in Resources */,
+				4724158D21E00FEF0092048E /* GoogleService-Info.plist in Resources */,
 				4F759E3821B7390D00E46F3B /* MenuTableViewCell.xib in Resources */,
 				4FF135F22127E82400FFFBF6 /* textFieldCustomVC.xib in Resources */,
 			);
@@ -298,33 +309,31 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-idapp/Pods-idapp-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-idapp/Pods-idapp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/EVReflection/EVReflection.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EVReflection.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-idapp/Pods-idapp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-idapp/Pods-idapp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9DB955F648A4BF8263D0121F /* [CP] Check Pods Manifest.lock */ = {
@@ -332,15 +341,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-idapp-checkManifestLockResult.txt",
 			);
@@ -518,6 +523,7 @@
 			baseConfigurationReference = 538C28C3C06DFE69F85D5192 /* Pods-idapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = idapp/idapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LL48MGDQPJ;
 				INFOPLIST_FILE = idapp/Info.plist;
@@ -538,6 +544,7 @@
 			baseConfigurationReference = 386E9A9AAD4670F22B1D0900 /* Pods-idapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = idapp/idapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LL48MGDQPJ;
 				INFOPLIST_FILE = idapp/Info.plist;

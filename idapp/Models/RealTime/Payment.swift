@@ -100,13 +100,13 @@ public class Item:EVNetworkingObject{
 
 //MARK: - Charges
 public class Charges: EVNetworkingObject{
-    public var data: [Data]?
+    public var data: [DataPayment]?
     public var has_more: NSNumber? //Bool
     public var object: String?
     public var total: NSNumber?
 }
 
-public class Data: EVNetworkingObject{
+public class DataPayment: EVNetworkingObject{
     public var amount: NSNumber?
     public var created_at: NSNumber?
     public var currency: String?

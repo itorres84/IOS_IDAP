@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>224447548204-s2mn3t94ieuv6lk0eovs6orj4de63jjh.apps.googleusercontent.com</string>
+	<string>224447548204-hr7l93rj4nkbbfqi0jrv996drmnqcii4.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.224447548204-s2mn3t94ieuv6lk0eovs6orj4de63jjh</string>
+	<string>com.googleusercontent.apps.224447548204-hr7l93rj4nkbbfqi0jrv996drmnqcii4</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCFXCEx2AaBgkZJl-LxJwQtsA5BYAj2VeM</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>ihm.idapp</string>
+	<string>com.idap.PagosIdap</string>
 	<key>PROJECT_ID</key>
 	<string>idap-9501d</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:224447548204:ios:d7a6ec42618b4da1</string>
+	<string>1:224447548204:ios:c73aa90bdeb23378</string>
 	<key>DATABASE_URL</key>
 	<string>https://idap-9501d.firebaseio.com</string>
 </dict>
